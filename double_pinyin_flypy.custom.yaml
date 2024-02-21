@@ -7,6 +7,15 @@ patch:
     - lua_translator@date_translator
     - lua_translator@time_translator
 
+  'engine/filters/@before 0':
+    simplifier@emoji_suggestion
+
+  emoji_suggestion:
+    opencc_config: emoji.json
+    option_name: emoji_suggestion
+    tips: none
+    inherit_comment: false
+
   switches:
     - name: ascii_mode
       reset: 1                      # 默认英文
@@ -19,6 +28,5 @@ patch:
     - name: ascii_punct
       states: [ ，。, ，． ]
     - name: emoji_suggestion
-      # reset: 1 # 默认状态: 0 关闭 1 开启
+      reset: 1                      # 默认状态: 0 关闭 1 开启
       states: ["🈚️️", "🈶️"]
-

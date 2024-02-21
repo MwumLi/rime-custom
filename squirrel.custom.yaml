@@ -6,5 +6,5 @@
 #
 patch:
   show_notifications_when: always
-  style/horizontal: false
+  style/horizontal: true
   style/color_scheme: luna

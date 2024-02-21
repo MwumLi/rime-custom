@@ -1,0 +1,10 @@
+# 参见全局配制
+#app_options:
+#  com.microsoft.VSCode: # 应用包名
+#    ascii_mode: true # true 默认英文，false 默认中文
+#    scii_punct: true # true 使用西文标点，false 使用中文标点
+#
+patch:
+  show_notifications_when: always
+  style/horizontal: false
+  style/color_scheme: luna

@@ -1,0 +1,24 @@
+# double_pinyin_flypy.custom.yaml, 只对小鹤双拼生效
+patch:
+  translator/preedit_format: {}     # 输入双拼码的时候不转化为全拼码
+  translator/dictionary: mwumli
+
+  engine/translators/+:
+    - lua_translator@date_translator
+    - lua_translator@time_translator
+
+  switches:
+    - name: ascii_mode
+      reset: 1                      # 默认英文
+      states: [ 中文, 西文 ]
+    - name: full_shape
+      states: [ 半角, 全角 ]
+    - name: simplification
+      reset: 1                      # 默认简体
+      states: [ 漢字, 汉字 ]
+    - name: ascii_punct
+      states: [ ，。, ，． ]
+    - name: emoji_suggestion
+      # reset: 1 # 默认状态: 0 关闭 1 开启
+      states: ["🈚️️", "🈶️"]
+

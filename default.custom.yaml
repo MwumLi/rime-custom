@@ -1,0 +1,19 @@
+# default.custom.yaml, 全局生效
+# 添加小鹤双拼到方案选单
+patch:
+  menu/page_size: 9
+
+  schema_list:
+    - schema: double_pinyin_flypy   # 新增小鹤双拼
+    - schema: luna_pinyin
+    - schema: luna_pinyin_fluency
+    - schema: luna_pinyin_simp
+    - schema: luna_pinyin_tw
+
+  key_binder/bindings:                      # 以方括号换页
+    - when: paging
+      accept: bracketleft
+      send: Page_Up
+    - when: has_menu
+      accept: bracketright
+      send: Page_Down

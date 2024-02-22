@@ -45,3 +45,7 @@ emoji 方案：<https://github.com/rime/rime-emoji>
         select_last_character: 'period'       # 点号选择最后的字
         # }
    ```
+
+## 计算器
+
+通过 lua 脚本实现, 键入 `/` 进入计算模式，继续输入计算表达式

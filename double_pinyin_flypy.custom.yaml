@@ -6,9 +6,13 @@ patch:
   engine/translators/+:
     - lua_translator@date_translator
     - lua_translator@time_translator
+    - lua_translator@calculate_translator
 
   'engine/filters/@before 0':
     simplifier@emoji_suggestion
+
+  
+  recognizer/patterns/calculator: "^\/.*$"          # 计算器
 
   emoji_suggestion:
     opencc_config: emoji.json
@@ -36,3 +40,5 @@ __patch:
   - patch/+:
       __include: lua_select_character:/patch
 # }
+
+  

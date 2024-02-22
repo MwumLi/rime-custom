@@ -29,3 +29,19 @@ emoji 方案：<https://github.com/rime/rime-emoji>
 配制参考 <https://github.com/rime/rime-emoji/blob/master/emoji_suggestion.yaml>  
 
 
+## 以词选字
+
+以词选字方案：<https://github.com/BlindingDark/rime-lua-select-character>  
+
+1. 命令安装：`bash rime-install BlindingDark/rime-lua-select-character:customize:schema=luna_pinyin`  
+
+2. 在 `rime.lua` 文件中添加 `select_character_processor = require("select_character")`
+
+3. 在输入法 custom 文件配制快捷键
+   ``` yml
+     key_binder/+:
+        # 以词选字{
+        select_first_character: 'comma'       # 逗号选择第一个字
+        select_last_character: 'period'       # 点号选择最后的字
+        # }
+   ```

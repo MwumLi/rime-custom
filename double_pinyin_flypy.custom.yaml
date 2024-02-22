@@ -30,3 +30,9 @@ patch:
     - name: emoji_suggestion
       reset: 1                      # 默认状态: 0 关闭 1 开启
       states: ["🈚️️", "🈶️"]
+
+__patch:
+# Rx: BlindingDark/rime-lua-select-character:customize:schema=double_pinyin_flypy {
+  - patch/+:
+      __include: lua_select_character:/patch
+# }

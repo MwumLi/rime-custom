@@ -1,7 +1,7 @@
 # default.custom.yaml, 全局生效
 # 添加小鹤双拼到方案选单
 patch:
-  menu/page_size: 9
+  menu/page_size: 6
 
   schema_list:
     - schema: double_pinyin_flypy   # 新增小鹤双拼

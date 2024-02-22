@@ -8,3 +8,6 @@ patch:
   show_notifications_when: always
   style/horizontal: true
   style/color_scheme: luna
+  style/inline_preedit: false           # 键入码不插入编辑位置，与侯选词同框
+
+  
